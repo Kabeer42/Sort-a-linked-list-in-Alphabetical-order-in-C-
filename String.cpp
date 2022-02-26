@@ -13,6 +13,7 @@ class Node{
 	int weight;
 	string feed;
 	Node *next;
+	
 	void input (string name,int age ,int race,int Breeds,float Bones ,int strength,int weight,string feed);
 	void bubbleSort(Node Name,int size);
 		void sortedInsert(Node* newnode);
@@ -34,7 +35,7 @@ Node *NewNode(string name,int age ,int race,int Breeds,float Bones ,int strength
 	 Node *next=NULL;
 	 return Name ;
 }
-
+//inserting a Node in Linked list
  void input(string name,int age ,int race,int Breeds,float Bones ,int strength,int weight,string feed ){
   	size ++;
   	Node *Name = NewNode(name, age ,race,Breeds,Bones ,strength,weight,feed ) ;
@@ -55,6 +56,7 @@ Node *NewNode(string name,int age ,int race,int Breeds,float Bones ,int strength
 	  }
   
 int i=0;
+//Swap a Node by pointer
 void Swap(Node*& a, Node*& b){
 	Node* temp = a;
 	a = b;
@@ -115,7 +117,7 @@ void bubbleSort(){
 		}
 		Head = sorted;
 	}
-	
+	// to display a linked List 
 void print() {
 	Node* temp = Head;
 	while (temp != NULL){
@@ -139,7 +141,6 @@ int main(){
 	input ("Camel",50 ,65,4,0 ,3,960,"89% dry Matters");
 	input ("Cow",20 ,40,71,2.4 ,88,720,"30 kilo ");
 	input ("Buffallo",25,56,10,200,05,800,"30 Kg/day");
-	//bubbleSort();
 	insertionSort(Head);
 	print();
 return 0;
